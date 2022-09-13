@@ -19,3 +19,19 @@
 Intentaremos utilizar isos más actualizadas. Windows 10 Pro y windows 2019 server.
 
 Usar Cortana para ejecutar comandos. Idea de proyecto.
+
+OOBE: Out of the box experience
+
+Priemra práctica:
+
+Necesitaremos 3 máquinas:
+
+- Win 2019 server GUI
+- Win 2019 server CORE
+- Win 10 Pro
+
+Vamos a tener un dominio (lrr.local) con 2 controladores de dominio (dc1 GUI y dc2 CORE) y una máquina cliente (WS1 (workstation))
+
+Comando de interés: nslookup
+
+Promocionamos DC! y unimos WS1 al dominio. Apagamos el cliente, dejamos el servidor encendido y unimos el dc2, al que también tenemos que condigurar como controlador DNS
