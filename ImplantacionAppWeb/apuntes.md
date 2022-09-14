@@ -20,3 +20,5 @@ Las máquinas a un segundo plano, lo importante es la conexión a Internet que e
 Lo que mantiene a las máquinas activas son los sectores de multimedia y el sector videojuegos.
 
 web vs escritorio
+
+Plugin: Interconecta (buscar definición).
