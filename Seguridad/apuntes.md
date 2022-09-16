@@ -58,3 +58,5 @@ Activos: Es un recurso del sistema necesario para que la organización alcance l
 - Software
 - Físicos (hardwre y estructura física de la organización, como la sala de servidores)
 - Personal de la organización
+
+INVESTIGAR: ATAQUE DE DÍA CERO

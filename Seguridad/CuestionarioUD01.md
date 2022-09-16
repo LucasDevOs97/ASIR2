@@ -27,13 +27,23 @@ Se verían afectados los tres aspectos, a no ser que se tenga una copia de segur
 - Fallo de funcionamiento en un disco duro de un servidor: limitar las pérdidas y poder recuperar la información ya que puede que no exista un backup actualizado y la información no se podría recuperar. Una manera de prevenirlo sería estar pendientes del estado de los discos del servidor, tener una buena ventilzación en el lugar en el que se encuentre el servidor (en caso de ser un ser servidor físico y no en la nube).
 
 5- ¿Qué piensas de las siguientes afirmaciones?¿Son ciertas o no? Justifica tu respuesta.
-- Un firewall es lo único que necesito para proteger mi sistema
-- Mi equipo tiene GNU/Linux y no soy vulnerable
-- Mi sistema operativo está actualizado, no habrá problema
+
+- Un firewall es lo único que necesito para proteger mi sistema: Falso, el firewall solo sirve para defender una parte del equipo, tendría que complementarse con otros sistemas de seguridad.
+
+- Mi equipo tiene GNU/Linux y no soy vulnerable: Falso, al ser de código libre se puede acceder al código fuente, por lo que se puede modificar y pueden introducir programas o característica maliciosas
+
+- Mi sistema operativo está actualizado, no habrá problema: 
+
 - Hago backups cada día, si pasa algo, puedo restaurar el sistema
+
 - Los móviles Android no pueden infectarse si solo uso aplpicaciones oficiales
+
 - Firefox es el navegador web más seguro
+
 - Nuestras aplicaciones no tienen brechas de seguridad porque están escritas en lenguajes como Java y C# que son totalmente seguros
+
 - Los antivirus gratuitos no sirven
+
 - El software libre es menos seguro
+
 - Tengo todos los parcher de seguridad de Windows instalados, no puede pasar nada.
