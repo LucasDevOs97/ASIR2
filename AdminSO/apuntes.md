@@ -53,4 +53,14 @@ Opciones para las tarjetas de red:
 192.168.200.018 -> IP
 255.255.0.0
 
-Buscar como configurar el core para que se abra con powershell
+127.0.0.1,1.1.1.1
+
+Hostname del servidor con GUI: ServerLRR
+
+Remove-NetRoute -InterfaceAlias Ethernet -confirm:$false
+
+Buscar como configurar el core para que se abra con powershell (tenemos que cambiar el valor de registro):
+- Abrir powershell
+- Ejecutar el siguiente comando:
+    - Set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\WinLogon' -Name Shell -Value 'PowerShell.exe'
+- Después tendremos que reiniciar y ya debería abrirse PowerShell (Restart-Computer -Force)
