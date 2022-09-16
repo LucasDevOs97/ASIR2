@@ -28,3 +28,19 @@ Criterios de cualificación:
 (Pass server: abc123.)
 
 La que pone Red es la tarjeta puente.
+
+Accedemos a "Administrar" > "Agregar roles o características"; instalamos lo que viene por defecto + servidor DHCP
+
+"Herramientas" > "DHCP", nos abre una aplicación mmc (Microsoft Management Console).
+
+Trabajaremos en IPv4.
+
+Ejemplo: Configurar servidor DHCP con las siguienres características: 
+- Rango de Direcciones: (trabajaremos con la red interna: hostonly) 10.0.0.10 - 10.0.0.100; Máscara: 255.255.255.0; Puerta de enlace: 10.0.0.1; DNS: 8.8.8.8; 10.0.0.1
+
+Click derecho sobre IPv4 > "Ámbito nuevo..."
+
+Nos pide nombre del ámbito, en este caso será "Ejemplo1"
+
+Exclusiones: Si dentro del rango que ponemos queremos reservar algunas IPs 
+Dominio primario: dominio de búsqueda
