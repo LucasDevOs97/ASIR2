@@ -74,7 +74,19 @@ Una vez tenemos configurados los parámetros de la red del servidor, ya podemos 
 
 Comandos para promocionar a DC:
 - Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
-- Test-ADDSForestInstallation
-- Install-ADDSForest
+//- Test-ADDSForestInstallation
+- Install-ADDSForest//
+- Add-ADDSForest
+
+//$credenciales="ANTONIO\Administrator"
+Install-ADDSDomainController -DomainName "antonio.cao" -InstallDns -Credential (get-credential $credenciales)  -DatabasePath "C:\ADDS\DB" -LogPath "C:\ADDS\Log" -SysvolPath "C:\ADDS\SYSVOL"//
 
 Manage > ADD Roles And Features > Role-Based or Feature-Based installation
+
+En el servidor GUI para promocionar a DC lo hacemos desde añadir roles y características, en roles tenemos que seleccionar servidor DNS y servicio de dominio de Active Directory
+
+- Nombre dominio: lucas.local
+- Nombre de Dominio NetBios: LUCAS
+- Rutas de acceso: 
+    - Base de datos y archivos de registro: C:\\Windows\NTDS
+    - SYSVOL: C:\\Windows\SYSVOL
