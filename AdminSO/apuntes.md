@@ -64,3 +64,10 @@ Buscar como configurar el core para que se abra con powershell (tenemos que camb
 - Ejecutar el siguiente comando:
     - Set-ItemProperty -Path 'HKLM:\Software\Microsoft\Windows NT\CurrentVersion\WinLogon' -Name Shell -Value 'PowerShell.exe'
 - Después tendremos que reiniciar y ya debería abrirse PowerShell (Restart-Computer -Force)
+
+Una vez tenemos configurados los parámetros de la red del servidor, ya podemos promocionarlo a Domain Controller; pero antes configuraremos el SSH:
+- Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+- Start-Service sshd
+- Set-Service -Name sshd -StartupType 'Automatic'
+- New-NetFirewallRule -DisplayName "SSH ALLOW TCP PORT 22" -Direction inbound -Profile Any -Action Allow -LocalPort 22 -Protocol TCP
+- New-NetFirewallRule -DisplayName "ALLOW ping" -Direction inbound -Profile Any -Action Allow -Protocol ICMPv4 -IcmpType 8
