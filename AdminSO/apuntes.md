@@ -71,3 +71,10 @@ Una vez tenemos configurados los parámetros de la red del servidor, ya podemos 
 - Set-Service -Name sshd -StartupType 'Automatic'
 - New-NetFirewallRule -DisplayName "SSH ALLOW TCP PORT 22" -Direction inbound -Profile Any -Action Allow -LocalPort 22 -Protocol TCP
 - New-NetFirewallRule -DisplayName "ALLOW ping" -Direction inbound -Profile Any -Action Allow -Protocol ICMPv4 -IcmpType 8
+
+Comandos para promocionar a DC:
+- Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+- Test-ADDSForestInstallation
+- Install-ADDSForest
+
+Manage > ADD Roles And Features > Role-Based or Feature-Based installation
