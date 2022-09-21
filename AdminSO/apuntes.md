@@ -18,8 +18,6 @@
 
 Intentaremos utilizar isos más actualizadas. Windows 10 Pro y windows 2019 server.
 
-Usar Cortana para ejecutar comandos. Idea de proyecto.
-
 OOBE: Out of the box experience
 
 Priemra práctica:
