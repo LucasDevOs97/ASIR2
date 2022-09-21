@@ -60,3 +60,36 @@ Cuando añadimos más ámbitos hay que tener cuidado con que los rangos no se su
 
 En el ejercicio tenemos que cambiar la IP y la máscara de red interna (host-only) 15.0.0.1 255.255.0.0
 
+
+## Configuración servidor Linux
+
+HDD: 100GB 
+Memoria 3GB
+Dos tarjetas de red:
+    - Host-Only
+    - Bridge
+
+Nombre de usuario: lucas
+pass: abc123.
+
+Deshabilitar LVM
+
+### Configuración de Red
+
+El archivo de configuración está basado en YAML, hay que tener mucho cuidado con los indentados
+
+Host-Only: 10.0.0.1 - 255.255.255.0
+Bridge: 192.168.0.118 - 255.255.0.0 - 192.168.0.100 - 8.8.8.8
+
+¿Cómo saber qué tarjetas de red son?
+> ip a
+La priemra que nos sale es un loopback
+La segunda es la externa (bridge) -> enp0s3
+La tercera es la interna (host-only) -> enp0s8
+
+> sudo su -> modo administrador
+
+Para configurar la red tenemos que hacer lo siguiente:
+- Movernos al directorio /etc/netplan
+- Hacemos una copia de seguridad del archivo por si acaso: cp 00-installer-config.yaml 00-installer-config.yaml.backup
+- Ahora editamos el archivo, donde veremos las dos tarjetas que vimos antes con el comando ip a (ctrl + o para guardar, ctrl + x para salir)
