@@ -88,3 +88,19 @@ En el servidor GUI para promocionar a DC lo hacemos desde añadir roles y caract
 - Rutas de acceso: 
     - Base de datos y archivos de registro: C:\\Windows\NTDS
     - SYSVOL: C:\\Windows\SYSVOL
+
+CREDENCIALES: 
+    - Por SSH no funciona el -Credential (get-credential), hay dos posibles soluciones:
+        - modificar Get-Credential para que lo pida por consola
+        - Guardar las credenciales y exportarlas a un archivo
+
+Configuración de Red del CORE:
+
+- IP y Máscara: 192.168.200.118/16
+- Gateway: 192.168.0.100
+- DNS: 127.0.0.1, 192.168.200.18
+
+Set-ItemProperty "HKLM:/Software/Microsoft/PowerShell/1/ShellIDS" ConsolePrompting $true
+
+Configuración de Red del Cliente:
+
