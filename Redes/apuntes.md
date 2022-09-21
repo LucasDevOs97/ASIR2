@@ -57,3 +57,6 @@ Vamos a asignarle la IP 10.0.0.25 a la máquina cliente:
     - Nos pide un nombre para la reserva, la IP que le queremos dar y la MAC de la máquina
 
 Cuando añadimos más ámbitos hay que tener cuidado con que los rangos no se superpongan
+
+En el ejercicio tenemos que cambiar la IP y la máscara de red interna (host-only) 15.0.0.1 255.255.0.0
+
