@@ -100,7 +100,11 @@ Configuración de Red del CORE:
 - Gateway: 192.168.0.100
 - DNS: 127.0.0.1, 192.168.200.18
 
-Set-ItemProperty "HKLM:/Software/Microsoft/PowerShell/1/ShellIDS" ConsolePrompting $true
+Set-ItemProperty "HKLM:/Software/Microsoft/PowerShell/1/ShellIDS" ConsolePrompting $true -> Para pedir las credenciales por consola.
 
 Configuración de Red del Cliente:
 
+
+
+
+Usuario de la máquina cliente: prueba1

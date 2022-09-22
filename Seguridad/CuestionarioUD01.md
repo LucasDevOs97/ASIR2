@@ -18,7 +18,7 @@ Se verían afectados los tres aspectos, a no ser que se tenga una copia de segur
 
 - Ataque DOS: Afectaría al hardware y al software. Para intentar evitarlo podríamos aumentar el ancho de banda así se podrán gestionar mejor los picos de tráfico que causan las denegaciones del servicio
 
-- Inundación: Sería una interrupción imprevista que afectaría a la detección de posibles amenazas porque es algo inesperado y limitar las pérdidas y a su posible recuperación ya que puede que no se tenga un backup actualizado en ese momento.
+- Inundación: Sería una interrupción imprevista que afectaría a la detección de posibles amenazas porque es algo inesperado y limitar las pérdidas y a su posible recuperación ya que puede que no se tenga un backup actualizado en ese momento. 
 
 - Usuario del sistema que formatee accidentalmente un disco: afectaría a la adecuada utilización de los recursos ya que ha hecho un mal uso del mismo y aumentaría las pérdidas de información. Una medida preventiva para esto sería guardar los discos en sitios asegurados (cerrados con llave o un código), formar al usuario sobre un uso correcto del recurso o limitar su acceso a este.
 
