@@ -22,3 +22,5 @@ Lo que mantiene a las máquinas activas son los sectores de multimedia y el sect
 web vs escritorio
 
 Plugin: Interconecta (buscar definición).
+
+Hay que tener cuidado con la comopatibildiad entre las cosas, por ejemplo, la versión de PHP y la de los servidores.
