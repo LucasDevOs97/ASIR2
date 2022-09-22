@@ -93,3 +93,5 @@ Para configurar la red tenemos que hacer lo siguiente:
 - Movernos al directorio /etc/netplan
 - Hacemos una copia de seguridad del archivo por si acaso: cp 00-installer-config.yaml 00-installer-config.yaml.backup
 - Ahora editamos el archivo, donde veremos las dos tarjetas que vimos antes con el comando ip a (ctrl + o para guardar, ctrl + x para salir)
+
+Herramientas para conectarnos en remoto: PuTTy, nRemoteNG
