@@ -1,6 +1,6 @@
 #script de configuración de equipo, hostname, red y SSH
 
-param($newhostname="",$ifalias="HOST-ONLY",$ipaddress="",$prefixlength="16",$defaultgateway="",$dnsservers="172.16.100.101,172.16.100.102,1.1.1.1",[switch]$ssh,[switch]$CredentialConsole,[switch]$WhatIf)
+param($newhostname="",$ifalias="Ethernet",$ipaddress="",$prefixlength="16",$defaultgateway="",$dnsservers="172.16.100.101,172.16.100.102,1.1.1.1",[switch]$ssh,[switch]$CredentialConsole,[switch]$WhatIf)
 
 #set new hostname
 
