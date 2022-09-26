@@ -72,8 +72,8 @@ Una vez tenemos configurados los parámetros de la red del servidor, ya podemos 
 
 Comandos para promocionar a DC:
 - Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
-//- Test-ADDSForestInstallation
-- Install-ADDSForest//
+- Test-ADDSForestInstallation
+- Install-ADDSForest
 - Add-ADDSForest
 
 //$credenciales="ANTONIO\Administrator"
@@ -104,7 +104,30 @@ Set-ItemProperty "HKLM:/Software/Microsoft/PowerShell/1/ShellIDS" ConsolePrompti
 
 Configuración de Red del Cliente:
 
+IP -> 192.168.200.119/16   
+Default gateway-> 192.168.0.100
 
+DNS:
+- 192.168.200.18
+- 192.168.200.118
 
 
 Usuario de la máquina cliente: prueba1
+
+
+Página de interés: chocolatey
+
+Acronis true image   
+
+Crear otro dominio distinto en el CORE
+
+Reenviadores condicionales, cuando las máquinas se resuelven es cuando establecemos la relación de confianza
+
+Configuración de red:
+- 192.168.200.218/16
+- 192.168.0.100
+- 127.0.0.1,1.1.1.1
+
+Comandos:
+- Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+- Install-ADDSForest -DomainName lucasramos.local -ForestMode Win2016 -DomainMode Win2016 -DomainNetbiosName LUCASRAMOS -InstallDns:$true 
