@@ -95,3 +95,48 @@ Para configurar la red tenemos que hacer lo siguiente:
 - Ahora editamos el archivo, donde veremos las dos tarjetas que vimos antes con el comando ip a (ctrl + o para guardar, ctrl + x para salir)
 
 Herramientas para conectarnos en remoto: PuTTy, nRemoteNG
+
+### Linux Instalación de Software
+
+comando apt:
+- apt update: actualiza los repositorios.
+- apt upgrade: actualiza el software.
+- apt install <paqueteSoftware>: instalación de software (paquetes).
+- apr autoremove: elimina software no utilizado, residual.
+- apt dist-upgrade: actualiza el SO a una nueva versión.
+
+### Configurar Servidor DHCP
+
+Servidor DHCP: isc-dhcp-server
+
+- Entramos con sudo su y ejecutamos el comando: apt install isc-dhcp-server
+
+Tenemos 2 tarjetas de red, una que va a la red externa (puente: enp0s3) y otra que va a la red interna (solo anfitrión: enp0s8). Para hacer las pruebas utilizaremos la red interna.
+Por defecto usa todas las tarjetas disponibles en el sistema, por lo que en el archivo de configuración le tendremos que indicar cuál queremos. Para ello tenemos que saber el nombre de cada tarjeta (ip a).
+
+- nano /etc/default/isc-dhcp-server
+- cd /etc/dhcp
+
+El archivo que nos interesa es el archivo: dhcpd.conf (v4)
+Primero creamos una copia por lo que pueda ocurrir:
+- cp dhcpd.coon dhcpd.conf.backup
+
+Configurar servicio DHCP con los siguientes parámetros:
+    - Rango Direcciones: 10.0.0.10 - 10.0.0.100
+    - Máscara: 255.255.255.0
+    - Router (Ruta Enlace): 10.0.0.1
+    - DNS: 10.0.0.1,8.8.8.8,1.1.1.1
+
+Una vez configurado el ámbito, hay que reiniciar el servicio con (hay 2 formas):
+    - service <nombreServicio> <accion>
+    - systemctl (se empieza a usar más ahora) <accion> <nombreServicio>
+    - Las acciones pueden ser:
+        - Start: iniciar
+        - Stop: Parar
+        - Restart: Reiniciar
+        - Reload: Recarga el servicio
+        - Status: información sobre el estado
+
+Para ver los errores hay que comprobar el fichero de log (auditoría) del sistema: /var/log/syslog (utilizar tail qe por defecto pone las últimas 10 líneas). El comando quedaría así:
+    - tail [-n] /var/log/syslog
+        - [-n]: opcional, número de líneas que queremos que muestre.
