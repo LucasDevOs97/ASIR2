@@ -30,3 +30,17 @@ Hay que tener cuidado con la comopatibildiad entre las cosas, por ejemplo, la ve
 Especificaciones de la máquina: 2 RAM y 30 de disco
 
 nombre de la máquina: impweb18
+
+
+
+Instalar GuestAdditions:
+
+- sudo apt-get install virtualbox-guest-additions-iso
+
+- Crear una carpeta, por ejemplo, en el escritorio para que sea fácilmente accesible. En "Dispositivos" insertamos la imagen de CD de las guest additions y copiamos todos los archivos del cd que se acaba de montar en la carpeta creada en el escritorio.
+
+- Damos permisos a la carpeta: sudo chmod 777 -R /home/usuario/Escritorio/nombreCarpeta/*
+
+- ejecutamos el archivo .run (nos desplazamos a la carpeta del escritorio): sudo ./VBoxLinuxAdditions.run
+
+- Reiniciamos
