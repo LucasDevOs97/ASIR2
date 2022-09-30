@@ -81,6 +81,8 @@ El archivo de configuración está basado en YAML, hay que tener mucho cuidado c
 Host-Only: 10.0.0.1 - 255.255.255.0
 Bridge: 192.168.0.118 - 255.255.0.0 - 192.168.0.100 - 8.8.8.8
 
+Después de cambiar la IP hay que ejecutar el comando: netplan apply
+
 ¿Cómo saber qué tarjetas de red son?
 > ip a
 La priemra que nos sale es un loopback

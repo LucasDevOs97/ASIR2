@@ -121,7 +121,7 @@ Acronis true image
 
 Crear otro dominio distinto en el CORE
 
-Reenviadores condicionales, cuando las máquinas se resuelven es cuando establecemos la relación de confianza
+Reenviadores condicionales (Conditional Forwarders), cuando las máquinas se resuelven es cuando establecemos la relación de confianza
 
 Configuración de red:
 - 192.168.200.218/16
@@ -131,3 +131,10 @@ Configuración de red:
 Comandos:
 - Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 - Install-ADDSForest -DomainName lucasramos.local -ForestMode Win2016 -DomainMode Win2016 -DomainNetbiosName LUCASRAMOS -InstallDns:$true 
+
+
+- Import-Module ADDSDeployment
+
+
+
+wmic computersystem get domain
