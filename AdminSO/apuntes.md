@@ -138,3 +138,12 @@ Comandos:
 
 
 wmic computersystem get domain
+
+IP DC03: 192.168.0.218
+IP DC01: 192.168.200.18
+
+Pasos para establecer la relación de confianza entre servidores, en este caso lo haremos desde el servidor con entorno gráfico:
+
+- Accedemos a la herramienta de DNS
+- Desplegamos nuestro domino y hacemos click derecho en "Reenviadores condicionales" y seleccionamos "Nuevo reenviador condicional..." y nos sale el asistente.
+- Ponemos el nombre del dominio del CORE (lucasramos.local) e introducimos también su IP (192.168.0.218)
