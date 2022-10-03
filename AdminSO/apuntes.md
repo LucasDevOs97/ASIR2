@@ -147,3 +147,7 @@ Pasos para establecer la relación de confianza entre servidores, en este caso l
 - Accedemos a la herramienta de DNS
 - Desplegamos nuestro domino y hacemos click derecho en "Reenviadores condicionales" y seleccionamos "Nuevo reenviador condicional..." y nos sale el asistente.
 - Ponemos el nombre del dominio del CORE (lucasramos.local) e introducimos también su IP (192.168.0.218)
+
+Una vez que hemos comprobado que se hacen ping entre los dominios podemos proceder a establecer la relación de confianza
+
+Ahora para poder acceder a los recursos compartidos crearemos, en el servidor GUI, un grupo que tenga acceso al recurso compartido y, dentro de este grupo, meteremos al grupo que creemos en el CORE dentro de este y así podrán tener su recurso compartido.
