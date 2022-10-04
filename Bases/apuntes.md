@@ -24,3 +24,9 @@ Método de evaluación:
 - --skip-opt: nos sirve para hacer copias de seguridad en sistemas más antiguos.
 
 Ruta para poder acceder a MySQL a través del cmd: C:\Program Files\MySQL\MySQL Server 8.0\bin; después ya podríamos ejecutar el comando mysql -u root -p
+
+## EJEMPLO DE COPIA DE SEGURIRDAD CON FECHA Y HORA
+
+mysqldump -u root -p sakila > copiaSakila_%date:~-4,4%-%date:~-7,2%-%date:~-10,2%_%time:~0,2%-%time:~3,2%-%time:~6,2%.sql
+
+Una transacción garantiza que se realicen todas las operaciones
