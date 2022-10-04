@@ -13,6 +13,7 @@ Criterios de cualificación:
 - Prueba de evaluación (Examen tipo test + práctica en el ordenador) -> 35%
 
 
+# Instalación y configuración de un servidor DHCP
 
 ## Características Windows Server (Virtualizado)
 
@@ -142,3 +143,7 @@ Una vez configurado el ámbito, hay que reiniciar el servicio con (hay 2 formas)
 Para ver los errores hay que comprobar el fichero de log (auditoría) del sistema: /var/log/syslog (utilizar tail qe por defecto pone las últimas 10 líneas). El comando quedaría así:
     - tail [-n] /var/log/syslog
         - [-n]: opcional, número de líneas que queremos que muestre.
+
+# Instalación y configuración de un servidor DNS
+
+Cuando buscamos en el navegador, lo que hace es preguntarle al servidor DNS y le devuelve la máquina.
