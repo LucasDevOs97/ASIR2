@@ -30,3 +30,8 @@ Ruta para poder acceder a MySQL a través del cmd: C:\Program Files\MySQL\MySQL 
 mysqldump -u root -p sakila > copiaSakila_%date:~-4,4%-%date:~-7,2%-%date:~-10,2%_%time:~0,2%-%time:~3,2%-%time:~6,2%.sql
 
 Una transacción garantiza que se realicen todas las operaciones
+
+Tabla film_actor (id pelicula, idActor)
+Hacer copia de seguridad: mysqldump -u root -p sakila film_actor > tablafilmactor.sql
+DELETE FROM film_actor: DELETE FROM film_actor;
+Recuperar datos: mysql -u root -p sakila < tablafilmactor.sql
