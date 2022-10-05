@@ -146,4 +146,53 @@ Para ver los errores hay que comprobar el fichero de log (auditoría) del sistem
 
 # Instalación y configuración de un servidor DNS
 
-Cuando buscamos en el navegador, lo que hace es preguntarle al servidor DNS y le devuelve la máquina.
+Primero instalaremos la función desde "Administrar > Agregar roles y características", en servicio seleccionamos Servidor DNS
+
+Ejemplo:
+Configurar servidor DNS de modo que resuelva de forma normal (directa) e inversa los siguientes equipos del dominio ejemplo.cam.
+ordenador1 -> 20.10.0.1
+ordenador2 -> 20.10.0.2
+ordenador3 -> 20.10.0.5
+ordenador4 -> 20.10.0.20
+
+Para esta red la máscara es de clase C (/24).
+
+La máscara es importante a la hora de hacer la inversa.
+
+RESOLUCIÓN DIRECTA (Tipo A):
+
+Cambiamos el DNS de la tarjeta bridge y nos ponemos a nosotros mismos
+
+Comprobar como funciona la solución DNS: nslookup
+
+Ahora crearemos zonas, que se llamarán igual que el dominio:
+
+click derecho y seleccionamos zona nueva en "Zonas de búsqueda directa".
+
+Ahora debemos crear los registros. Tienen encabezados que tienen información sobre el servidor dns y luego ya van los registros
+
+RESOLUCIÓN INVERSA (Tipo PTR):
+
+"Zona de búsqueda inversa"
+
+Se hace una zona teniendo en cuenta la dirección de red
+
+Nuevo puerto TPR
+
+Una vez creada la zona inversa vamos a la directa ya añadimos el cuarto ordenador
+
+
+También queremos que, si es un servidor web, sea capaz de reconocer el www.ejemplo.cam
+
+Continuación del ejemplo:  
+www alias de ordenador1; ftp alias de ordenador2; mail alias de ordenador1 (registro CNAME)    
+ordenador1 es un intercambiador (servidor) de correo (registro MX)
+
+CNAME solo se utiliza en zonas de resolución directa, en las inversas sería a través de PTR
+
+Prioridad: cuando hay varios, el que tiene el número más bajo será el de mayor prioridad
+
+Para probar con el nslookup hay que poner: set type=MX e introducimos el nombre del dominio
+
+
+NOTA: CAMBIAR EN EL EJERCICIO 3 LOS SERVIDORES DNS, NO ES SERVIDORES DE NOMBRES, ES SERVIDOR DNS
