@@ -35,3 +35,16 @@ Tabla film_actor (id pelicula, idActor)
 Hacer copia de seguridad: mysqldump -u root -p sakila film_actor > tablafilmactor.sql
 DELETE FROM film_actor: DELETE FROM film_actor;
 Recuperar datos: mysql -u root -p sakila < tablafilmactor.sql
+
+# Creación de Usuarios
+
+## Modificación de las contraseñas
+
+- Podemos cambiar la contraseña del usuario que está conectado de la siguiente manera:
+
+    - ALTER USER USER() IDENTIFIED BY 'asir';
+        - Donde USER() nos devuelve el usuario conectado e IDENTIFIED BY '' es la nueva contraseña.
+- Otra forma es con el comando mysqladmin (inseguro, no recomendado):
+    - mysqladmin -u asir -p -h localhost password "1234"
+- Con el siguiente comando:
+    - SET PASSWORD FOR usuario2@localhost = 'hola';
