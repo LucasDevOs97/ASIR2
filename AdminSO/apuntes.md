@@ -151,3 +151,25 @@ Pasos para establecer la relación de confianza entre servidores, en este caso l
 Una vez que hemos comprobado que se hacen ping entre los dominios podemos proceder a establecer la relación de confianza
 
 Ahora para poder acceder a los recursos compartidos crearemos, en el servidor GUI, un grupo que tenga acceso al recurso compartido y, dentro de este grupo, meteremos al grupo que creemos en el CORE dentro de este y así podrán tener su recurso compartido.
+
+
+## Script
+
+A partir de un fichero .csv:
+- nombre
+- login
+- password
+- gwpo
+
+Para todos los usuarios:
+1- Crear, si no existe, el grupo (domain local).
+2- Crear, si no existe, el usuario
+3- Añadir al usuario al grupo
+
+
+Import-CSV -Path <ruta-archivo> -Delimiter ";" -Encoding UTF8
+
+ForEach-Object
+foreach
+
+Import-CSV -Path <ruta-archivo> -Delimiter ";" -Encoding UTF8 | ForEach-Object {$_}
