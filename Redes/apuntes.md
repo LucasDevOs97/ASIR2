@@ -196,3 +196,13 @@ Para probar con el nslookup hay que poner: set type=MX e introducimos el nombre 
 
 
 NOTA: CAMBIAR EN EL EJERCICIO 3 LOS SERVIDORES DNS, NO ES SERVIDORES DE NOMBRES, ES SERVIDOR DNS
+    
+    
+     
+En las zonas inversas solo se crean los registros PTR
+
+## Inversa del CNAME
+
+Vamos a la zona inversa, creamos un nuevo puntero PTR, ponemos la misma IP del host y en nombre del host ponemos el alias (server.empresa.cam)
+
+ipconfig /flushdns
