@@ -1,0 +1,1 @@
+$csv = Import-Csv <path>
