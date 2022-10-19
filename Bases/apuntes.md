@@ -48,3 +48,15 @@ Recuperar datos: mysql -u root -p sakila < tablafilmactor.sql
     - mysqladmin -u asir -p -h localhost password "1234"
 - Con el siguiente comando:
     - SET PASSWORD FOR usuario2@localhost = 'hola';
+
+EJERCICIOS:
+
+Crear una base de datos con una tabla y un par de registros
+
+1- Copia de seguridad de sakila y de la nueva base de datos creada.
+2- Realizar una copia de sakila menos de la tabla de actor (actor) y peliculas (film).
+3- Copia de seguridad de la tabla peliculas (film) de Sakila.
+4- Creación de un usuario asociado a la máquina 192.168.10.40 con contraseña 4321 y que deba cambiar la contraseña cuando inicie sesión.
+5- Creación de un usuario para cualquier máquina sin contraseña.
+6- Creación de un usuario llamado asir para localhost con contraseña 1234 y con este usuario debemos probar a entrar en el sistema y comprobar cómo es la instrucción de creación de ese usuario.
+7- Eliminación de todos los usuarios creados.
