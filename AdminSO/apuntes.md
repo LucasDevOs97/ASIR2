@@ -173,3 +173,6 @@ ForEach-Object
 foreach
 
 Import-CSV -Path <ruta-archivo> -Delimiter ";" -Encoding UTF8 | ForEach-Object {$_}
+
+## Clúster
+
