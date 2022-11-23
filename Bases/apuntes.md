@@ -60,3 +60,78 @@ Crear una base de datos con una tabla y un par de registros
 5- Creación de un usuario para cualquier máquina sin contraseña.
 6- Creación de un usuario llamado asir para localhost con contraseña 1234 y con este usuario debemos probar a entrar en el sistema y comprobar cómo es la instrucción de creación de ese usuario.
 7- Eliminación de todos los usuarios creados.
+
+PROCEDIMIENTO ALMACENADO: seleccionar nombre de los actores con códigos entre el 1 y el 100
+
+USE sakila;
+
+DELIMETER //
+
+CREATE PROCEDURE procedimiento1()
+BEGIN
+
+    SELECT first_name
+    FROM actor
+    WHERE actor_id BETWEEN 1 AND 100;
+
+END
+
+//
+
+DELIMITER;
+
+CALL procedimiento1();
+
+Modificarlo para que los valores del id no sean fijos si no que se los pasemos al proceso almacenado.
+
+
+DELIMITER //
+
+CREATE PROCEDURE procedimiento2(IN id1 INT, IN id2 INT)
+BEGIN
+
+    SELECT first_name
+    FROM actor
+    WHERE actor_id BETWEEN id1 AND id2;
+
+END
+//
+
+DELIMITER ;
+
+CALL procedimiento2(1, 100);
+
+int id1, id2, max, min;
+
+
+
+if(id1 > 0){
+
+    id1 = max;
+
+    if(id1 > id2){
+
+        id1 = max;
+
+    }
+
+    else{
+
+        id2 = max;
+
+    }
+
+}
+
+else if{
+
+
+
+}
+
+
+IF (condicion) THEN
+    sentencias
+ELSE 
+    sentencias
+END IF;
