@@ -176,3 +176,4 @@ Import-CSV -Path <ruta-archivo> -Delimiter ";" -Encoding UTF8 | ForEach-Object {
 
 ## Clúster
 
+https://www.windowsafg.com/
